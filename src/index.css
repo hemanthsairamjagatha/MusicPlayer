@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Spotify Clone Design System */
+
+@layer base {
+  :root {
+    /* Spotify-inspired color palette */
+    --spotify-black: 0 0% 7%;
+    --spotify-dark: 0 0% 11%;
+    --spotify-darker: 0 0% 9%;
+    --spotify-gray: 0 0% 18%;
+    --spotify-light-gray: 0 0% 64%;
+    --spotify-white: 0 0% 100%;
+    --spotify-green: 141 76% 48%;
+    --spotify-green-hover: 141 76% 43%;
+    --spotify-green-light: 141 73% 84%;
+
+    /* Base theme */
+    --background: var(--spotify-black);
+    --foreground: var(--spotify-white);
+
+    --card: var(--spotify-dark);
+    --card-foreground: var(--spotify-white);
+
+    --popover: var(--spotify-darker);
+    --popover-foreground: var(--spotify-white);
+
+    --primary: var(--spotify-green);
+    --primary-foreground: var(--spotify-black);
+
+    --secondary: var(--spotify-gray);
+    --secondary-foreground: var(--spotify-white);
+
+    --muted: var(--spotify-gray);
+    --muted-foreground: var(--spotify-light-gray);
+
+    --accent: var(--spotify-green);
+    --accent-foreground: var(--spotify-black);
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: var(--spotify-white);
+
+    --border: var(--spotify-gray);
+    --input: var(--spotify-darker);
+    --ring: var(--spotify-green);
+
+    --radius: 0.5rem;
+
+    /* Music player specific */
+    --player-background: var(--spotify-darker);
+    --player-control: var(--spotify-white);
+    --player-control-hover: var(--spotify-green);
+
+    /* Sidebar */
+    --sidebar-background: var(--spotify-black);
+    --sidebar-foreground: var(--spotify-light-gray);
+    --sidebar-primary: var(--spotify-green);
+    --sidebar-primary-foreground: var(--spotify-black);
+    --sidebar-accent: var(--spotify-gray);
+    --sidebar-accent-foreground: var(--spotify-white);
+    --sidebar-border: var(--spotify-gray);
+    --sidebar-ring: var(--spotify-green);
+
+    /* Gradients */
+    --gradient-main: linear-gradient(180deg, hsl(var(--spotify-gray) / 0.2) 0%, hsl(var(--spotify-black)) 100%);
+    --gradient-player: linear-gradient(90deg, hsl(var(--spotify-darker)) 0%, hsl(var(--spotify-black)) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 8px 32px hsl(var(--spotify-green) / 0.3);
+    --shadow-card: 0 8px 24px hsl(0 0% 0% / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
